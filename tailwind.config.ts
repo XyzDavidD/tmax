@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Bricolage Grotesque', 'sans-serif'],
+        bricolage: ['Bricolage Grotesque', 'sans-serif'],
+        momo: ['Momo Trust Display', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

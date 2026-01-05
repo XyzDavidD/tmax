@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Bricolage Grotesque Font */
+.bricolage-grotesque {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -55,6 +64,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
   }
 }
 
