@@ -219,10 +219,12 @@ export default function Home() {
               {/* Phone 1: Scanner */}
               <div className="absolute left-0 top-20 z-10 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="w-[300px] h-[600px] bg-black rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden relative">
-                  {/* Image Placeholder */}
-                  <div className="w-full h-full bg-gray-900 flex items-center justify-center">
-                    <ImageIcon className="w-24 h-24 text-gray-700" />
-                  </div>
+                  <Image 
+                    src="/phone_1.png" 
+                    alt="Scanner Interface" 
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
 
@@ -237,10 +239,12 @@ export default function Home() {
               {/* Phone 2: Results */}
               <div className="absolute right-0 top-0 z-20 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="w-[300px] h-[600px] bg-black rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden relative">
-                  {/* Image Placeholder */}
-                  <div className="w-full h-full bg-gray-900 flex items-center justify-center">
-                    <ImageIcon className="w-24 h-24 text-gray-700" />
-                  </div>
+                  <Image 
+                    src="/phone_2.png" 
+                    alt="Results Interface" 
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
