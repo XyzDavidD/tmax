@@ -138,6 +138,7 @@ export default function Home() {
               onClick={handleNavbarClick}
               className="bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg shadow-orange-500/20 transition-all hover:scale-105"
             >
+              <Gift className="w-4 h-4 mr-2" />
               Get 1 month free
             </Button>
           </div>
@@ -205,6 +206,7 @@ export default function Home() {
                     size="lg" 
                     className="h-14 px-8 bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold shadow-lg shadow-orange-500/20"
                   >
+                    <Gift className="w-5 h-5 mr-2" />
                     Get 1 month free
                   </Button>
                 </div>
@@ -226,14 +228,6 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-              </div>
-
-              {/* Arrow Connector */}
-              <div className="absolute left-[40%] top-1/2 -translate-y-1/2 z-0 hidden xl:block">
-                <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 30 C 40 30, 40 30, 110 30" stroke="white" strokeWidth="2" strokeDasharray="4 4" />
-                  <path d="M105 25 L 115 30 L 105 35" fill="white" />
-                </svg>
               </div>
 
               {/* Phone 2: Results */}
