@@ -37,6 +37,9 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [isInputAnimating, setIsInputAnimating] = useState(false);
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
   const emailInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -75,6 +78,39 @@ export default function Home() {
     }, 1000);
   };
 
+  const handleSubmit = async () => {
+    if (!email) {
+      setError("Please enter your email");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to subscribe");
+      }
+
+      setIsModalOpen(true);
+      setEmail("");
+    } catch (err: any) {
+      setError(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-[#0d0d0d] text-white overflow-x-hidden selection:bg-orange-500/30">
       {/* Modal */}
@@ -106,7 +142,7 @@ export default function Home() {
 
               <div className="w-full p-4 bg-white/5 rounded-xl border border-white/5">
                 <p className="text-sm text-gray-400 mb-2">We'll notify you at:</p>
-                <p className="text-white font-medium">your-email@example.com</p>
+                <p className="text-white font-medium break-all">{email || "your-email@example.com"}</p>
               </div>
 
               <Button 
@@ -197,19 +233,29 @@ export default function Home() {
                     ref={emailInputRef}
                     type="email" 
                     placeholder="Enter your email address" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
+                    disabled={isSubmitting}
                     className={`flex h-14 w-full rounded-md border border-white/10 bg-white/5 px-4 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 disabled:cursor-not-allowed disabled:opacity-50 text-white transition-all hover:bg-white/10 ${
                       isInputAnimating ? 'animate-[pulse_0.5s_ease-in-out_2] ring-2 ring-orange-500 scale-105' : ''
                     }`}
                   />
                   <Button 
-                    onClick={() => setIsModalOpen(true)}
+                    onClick={handleSubmit}
+                    disabled={isSubmitting}
                     size="lg" 
-                    className="h-14 px-8 bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold shadow-lg shadow-orange-500/20"
+                    className="h-14 px-8 bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold shadow-lg shadow-orange-500/20 disabled:opacity-50"
                   >
                     <Gift className="w-5 h-5 mr-2" />
-                    Get 1 month free
+                    {isSubmitting ? "Subscribing..." : "Get 1 month free"}
                   </Button>
                 </div>
+                {error && (
+                  <p className="text-sm text-red-500">
+                    {error}
+                  </p>
+                )}
                 <p className="text-sm text-gray-400">
                   Get a <span className="text-orange-500 font-semibold">free month</span> when we launch!
                 </p>
@@ -234,7 +280,7 @@ export default function Home() {
               <div className="absolute right-0 top-0 z-20 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="w-[300px] h-[600px] bg-black rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden relative">
                   <Image 
-                    src="/phone_2.png" 
+                    src="/phone_3.png" 
                     alt="Results Interface" 
                     fill
                     className="object-cover"

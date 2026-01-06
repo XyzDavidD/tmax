@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "TMAX - Terms & Privacy",
-  description: "TMAX Terms of Service and Privacy Policy",
+  title: "TMAX - Boost Your Testosterone Naturally",
+  description: "The first app designed to help you naturally boost your testosterone by identifying endocrine disruptors in everyday products and building testosterone-optimizing habits into your lifestyle.",
 };
 
 export default function RootLayout({
