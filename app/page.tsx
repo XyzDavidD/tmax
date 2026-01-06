@@ -38,6 +38,7 @@ export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [isInputAnimating, setIsInputAnimating] = useState(false);
   const [email, setEmail] = useState("");
+  const [submittedEmail, setSubmittedEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
   const emailInputRef = useRef<HTMLInputElement>(null);
@@ -102,6 +103,7 @@ export default function Home() {
         throw new Error(data.error || "Failed to subscribe");
       }
 
+      setSubmittedEmail(email);
       setIsModalOpen(true);
       setEmail("");
     } catch (err: any) {
@@ -142,7 +144,7 @@ export default function Home() {
 
               <div className="w-full p-4 bg-white/5 rounded-xl border border-white/5">
                 <p className="text-sm text-gray-400 mb-2">We'll notify you at:</p>
-                <p className="text-white font-medium break-all">{email || "your-email@example.com"}</p>
+                <p className="text-white font-medium break-all">{submittedEmail}</p>
               </div>
 
               <Button 
