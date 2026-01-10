@@ -43,7 +43,7 @@ export default function PrivacyPage() {
               Privacy Policy
             </h1>
             <p className="text-gray-400 text-sm">
-              Last Updated: <span className="text-[#FF6B35]">[DATE]</span>
+              Last Updated: <span className="text-[#FF6B35]">January 10, 2025</span>
             </p>
           </div>
 
@@ -53,7 +53,8 @@ export default function PrivacyPage() {
             <section>
               <div className="text-gray-300 space-y-4 leading-relaxed">
                 <p>
-                  This Privacy Policy explains how [COMPANY LEGAL NAME] ("Company," "we," "us," "our") 
+                  This Privacy Policy explains how DISPLAYOURVISION SRL ("Company," "we," "us," "our"), 
+                  a company registered in Romania (CUI: 48488845, Reg. Com.: J12/3036/2023), 
                   collects, uses, shares, and protects information when you use TMAX.
                 </p>
               </div>
@@ -92,8 +93,8 @@ export default function PrivacyPage() {
                 <ul className="list-disc list-inside space-y-2 pl-4">
                   <li>Device identifiers and technical data (device type, OS version, app version)</li>
                   <li>App usage events (feature interactions, crash logs)</li>
-                  <li>Approximate location derived from IP only if applicable (or none, depending on your configuration) <span className="text-gray-500">[BRACKET THIS IF YOU DON'T USE IT]</span></li>
-                  <li>Cookies/SDK identifiers (for analytics) <span className="text-gray-500">[BRACKET THIS IF YOU DON'T USE IT]</span></li>
+                  <li>Approximate location derived from IP (if applicable)</li>
+                  <li>Cookies/SDK identifiers (for analytics)</li>
                 </ul>
               </div>
 
@@ -111,7 +112,7 @@ export default function PrivacyPage() {
                   choose what you input.
                 </p>
                 <p>
-                  We do not ask for lab values, diagnoses, or medical records. <span className="text-gray-500">[BRACKET IF YOU DO]</span>
+                  We do not ask for lab values, diagnoses, or medical records.
                 </p>
               </div>
             </section>
@@ -143,7 +144,7 @@ export default function PrivacyPage() {
                 </p>
                 <p>
                   We may use de-identified/aggregated data and certain User Content to improve our models 
-                  and Service unless you opt out or unless prohibited by law. <span className="text-gray-500">[BRACKET/EDIT BASED ON YOUR ACTUAL PRACTICE]</span>
+                  and Service unless you opt out or unless prohibited by law.
                 </p>
               </div>
             </section>
@@ -160,7 +161,7 @@ export default function PrivacyPage() {
                   <li>In a business transfer (merger, acquisition, asset sale)</li>
                 </ul>
                 <p>
-                  We do not sell your personal information in exchange for money <span className="text-gray-500">[BRACKET/EDIT if your practices differ]</span>.
+                  We do not sell your personal information.
                 </p>
               </div>
             </section>
@@ -171,7 +172,7 @@ export default function PrivacyPage() {
               <p className="text-gray-300 leading-relaxed">
                 We retain information as long as necessary to provide the Service and for legitimate 
                 business purposes (security, compliance, dispute resolution). You may request deletion 
-                subject to legal requirements. <span className="text-gray-500">[BRACKET + ADD PROCESS]</span>
+                by contacting us at inquiries.tmax@gmail.com.
               </p>
             </section>
 
@@ -179,7 +180,7 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-2xl font-bold text-[#FF6B35] mb-4">7. Your Choices and Rights</h2>
               <div className="text-gray-300 space-y-4 leading-relaxed">
-                <p>Depending on your jurisdiction, you may have rights to:</p>
+                <p>Depending on your jurisdiction (including under GDPR for EU residents), you may have rights to:</p>
                 <ul className="list-disc list-inside space-y-2 pl-4">
                   <li>Access, correct, or delete your data</li>
                   <li>Object to or restrict certain processing</li>
@@ -187,7 +188,7 @@ export default function PrivacyPage() {
                   <li>Withdraw consent (where processing is based on consent)</li>
                 </ul>
                 <p>
-                  How to exercise rights: <span className="text-[#FF6B35]">[INSTRUCTIONS / EMAIL]</span>
+                  To exercise your rights, please contact us at: <span className="text-[#FF6B35]">inquiries.tmax@gmail.com</span>
                 </p>
               </div>
             </section>
@@ -205,8 +206,8 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-2xl font-bold text-[#FF6B35] mb-4">9. Children</h2>
               <p className="text-gray-300 leading-relaxed">
-                The Service is not directed to children under [AGE]. If you believe a child has 
-                provided personal information, contact us at <span className="text-[#FF6B35]">[CONTACT EMAIL]</span>.
+                The Service is not directed to children under 16 years of age. If you believe a child has 
+                provided personal information, contact us at <span className="text-[#FF6B35]">inquiries.tmax@gmail.com</span>.
               </p>
             </section>
 
@@ -215,7 +216,7 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-bold text-[#FF6B35] mb-4">10. International Transfers</h2>
               <p className="text-gray-300 leading-relaxed">
                 If you operate internationally, your data may be processed in countries other than your 
-                own. We use appropriate safeguards where required. <span className="text-gray-500">[BRACKET AND EDIT FOR YOUR SETUP]</span>
+                own. We use appropriate safeguards where required by law.
               </p>
             </section>
 
@@ -241,8 +242,8 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-2xl font-bold text-[#FF6B35] mb-4">13. Contact</h2>
               <div className="text-gray-300 space-y-2 leading-relaxed">
-                <p>Privacy questions: <span className="text-[#FF6B35]">[PRIVACY EMAIL]</span></p>
-                <p>Company address: <span className="text-[#FF6B35]">[ADDRESS]</span></p>
+                <p>Email: <span className="text-[#FF6B35]">inquiries.tmax@gmail.com</span></p>
+                <p>Company: <span className="text-[#FF6B35]">DISPLAYOURVISION SRL (CUI: 48488845)</span></p>
               </div>
             </section>
 

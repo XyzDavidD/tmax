@@ -43,7 +43,7 @@ export default function TermsPage() {
               TMAX Terms and Conditions
             </h1>
             <p className="text-gray-400 text-sm">
-              Last Updated: <span className="text-[#FF6B35]">[DATE]</span>
+              Last Updated: <span className="text-[#FF6B35]">January 10, 2025</span>
             </p>
           </div>
 
@@ -56,12 +56,12 @@ export default function TermsPage() {
               <div className="text-gray-300 space-y-4 leading-relaxed">
                 <p>
                   The TMAX mobile application (the "App"), any related website(s) (the "Website"), 
-                  and all related services (together, the "Service") are operated by [COMPANY LEGAL NAME] 
-                  (the "Company," "we," "us," "our"), a company organized under the laws of [JURISDICTION], 
-                  with its registered office at [ADDRESS].
+                  and all related services (together, the "Service") are operated by DISPLAYOURVISION SRL 
+                  (the "Company," "we," "us," "our"), a company organized under the laws of Romania 
+                  (CUI: 48488845, Reg. Com.: J12/3036/2023).
                 </p>
                 <p>
-                  You may contact us at: <span className="text-[#FF6B35]">[CONTACT EMAIL]</span>.
+                  You may contact us at: <span className="text-[#FF6B35]">inquiries.tmax@gmail.com</span>.
                 </p>
               </div>
             </section>
@@ -130,7 +130,7 @@ export default function TermsPage() {
               
               <h3 className="text-xl font-semibold text-white mt-6 mb-3">2.1 Age Requirements</h3>
               <p className="text-gray-300 leading-relaxed">
-                You must be at least [MINIMUM AGE] to use the Service. If you are under the age of 
+                You must be at least 16 years old to use the Service. If you are under the age of 
                 legal majority in your jurisdiction, you may only use the Service with the consent and 
                 supervision of a parent or legal guardian.
               </p>
@@ -330,7 +330,7 @@ export default function TermsPage() {
                   <li>The Company's total liability shall not exceed the greater of:
                     <ul className="list-disc list-inside space-y-1 pl-6 mt-2">
                       <li>The amount you paid to the Company in the twelve (12) months preceding the claim; or</li>
-                      <li>[CURRENCY AMOUNT].</li>
+                      <li>50 EUR.</li>
                     </ul>
                   </li>
                 </ul>
@@ -350,8 +350,8 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-bold text-[#FF6B35] mb-4">14. GOVERNING LAW</h2>
               <p className="text-gray-300 leading-relaxed">
-                These Terms are governed by the laws of [GOVERNING LAW JURISDICTION], subject to mandatory consumer 
-                protection laws where applicable.
+                These Terms are governed by the laws of Romania, subject to mandatory consumer 
+                protection laws where applicable, including applicable European Union regulations.
               </p>
             </section>
 
@@ -384,8 +384,8 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-bold text-[#FF6B35] mb-4">18. CONTACT</h2>
               <div className="text-gray-300 space-y-2 leading-relaxed">
-                <p>Email: <span className="text-[#FF6B35]">[CONTACT EMAIL]</span></p>
-                <p>Address: <span className="text-[#FF6B35]">[ADDRESS]</span></p>
+                <p>Email: <span className="text-[#FF6B35]">inquiries.tmax@gmail.com</span></p>
+                <p>Company: <span className="text-[#FF6B35]">DISPLAYOURVISION SRL (CUI: 48488845)</span></p>
               </div>
             </section>
 
